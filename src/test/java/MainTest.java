@@ -34,12 +34,11 @@ public class MainTest {
 				.isCloseTo(expected, Offset.offset(EPS));
 	}
 
-	@Test
-	public void testDiapason() {
-		double step = 0.002;
-		double start = 0.3;
-		double end = 2.8;
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetCountOfSteps")
+	public void testGetCountOfSteps(double step, double start, double end,
+									int expected) {
 		assertThat(main.getCountOfSteps(step, start, end))
-				.isEqualTo(1250);
+				.isEqualTo(expected);
 	}
 }

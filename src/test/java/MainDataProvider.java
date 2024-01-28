@@ -26,4 +26,13 @@ public class MainDataProvider {
 				{2.8, -2.4531558383931147},
 		};
 	}
+	@DataProvider
+	public static Object[][] testGetCountOfSteps() {
+		return new Object[][]{
+				{0.002, 0.3, 2.8, 1250},
+				{1, 0.3, 2.8, 2},
+				{0.2, 0.3, 2.8, 12},
+				{0.001, 0, 1, 1000},
+		};
+	}
 }

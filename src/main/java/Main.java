@@ -18,6 +18,6 @@ public class Main {
 	}
 
 	public int getCountOfSteps(double step, double start, double end) {
-		return 0;
+		return (int) ((end - start) / step);
 	}
 }
