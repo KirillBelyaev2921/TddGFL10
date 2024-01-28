@@ -26,10 +26,20 @@ public class MainTest {
 		assertThat(main.calculate(x))
 				.isCloseTo(expected, Offset.offset(EPS));
 	}
+
 	@Test(dataProviderClass = MainDataProvider.class,
 			dataProvider = "testThirdCase")
 	public void testThirdCase(double x, double expected) {
 		assertThat(main.calculate(x))
 				.isCloseTo(expected, Offset.offset(EPS));
+	}
+
+	@Test
+	public void testDiapason() {
+		double step = 0.002;
+		double start = 0.3;
+		double end = 2.8;
+		assertThat(main.getCountOfSteps(step, start, end))
+				.isEqualTo(1250);
 	}
 }

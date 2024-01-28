@@ -16,4 +16,8 @@ public class Main {
 		}
 		return result;
 	}
+
+	public int getCountOfSteps(double step, double start, double end) {
+		return 0;
+	}
 }
