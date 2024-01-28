@@ -40,7 +40,13 @@ public class MainDataProvider {
 		return new Object[][]{
 				{2, 0.3, 2.8,
 						new FunctionResult(new double[]{0.3, 2.3},
-								new double[]{3.148703935719195, 13.89})}
+								new double[]{3.148703935719195, 13.89})},
+				{1, 0.3, 2.8,
+						new FunctionResult(new double[]{0.3, 1.3, 2.3},
+								new double[]{3.148703935719195, 14.29, 13.89})},
+				{1, 1, 2,
+						new FunctionResult(new double[]{1, 2},
+								new double[]{14.8, 13.8})},
 		};
 	}
 }
