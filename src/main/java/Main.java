@@ -65,4 +65,15 @@ public class Main {
 		return Arrays.stream(functionResult.y())
 				.average().orElse(0);
 	}
+
+	public void printMinValue(FunctionResult functionResult) {
+		int index = getMinY(functionResult);
+		System.out.printf("Min Value - Index: %d, Abscissa: %f, Ordinate: %f",
+				index, functionResult.x()[index], functionResult.y()[index]);
+	}
+	public void printMaxValue(FunctionResult functionResult) {
+		int index = getMaxY(functionResult);
+		System.out.printf("Max Value - Index: %d, Abscissa: %f, Ordinate: %f",
+				index, functionResult.x()[index], functionResult.y()[index]);
+	}
 }
