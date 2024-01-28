@@ -26,4 +26,10 @@ public class MainTest {
 		assertThat(main.calculate(x))
 				.isCloseTo(expected, Offset.offset(EPS));
 	}
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testThirdCase")
+	public void testThirdCase(double x, double expected) {
+		assertThat(main.calculate(x))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
 }

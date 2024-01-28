@@ -12,7 +12,7 @@ public class MainDataProvider {
 	@DataProvider
 	public static Object[][] testSecondCase() {
 		return new Object[][]{
-				{0.3002, 16.68932004},
+				{0.302, 16.683204},
 				{1, 14.8},
 				{2, 13.8},
 				{2.3, 13.89},
@@ -21,6 +21,9 @@ public class MainDataProvider {
 	@DataProvider
 	public static Object[][] testThirdCase() {
 		return new Object[][]{
+				{2.302, -7.6915570953548595},
+				{2.4, -6.320498598746533},
+				{2.8, -2.4531558383931147},
 		};
 	}
 }
