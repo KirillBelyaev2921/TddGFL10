@@ -54,18 +54,18 @@ public class MainDataProvider {
 	public Object[][] testGetMinY() {
 		return new Object[][]{
 				{new FunctionResult(new double[]{0.3, 2.3},
-						new double[]{3.148703935719195, 13.89}), 3.148703935719195},
+						new double[]{3.148703935719195, 13.89}), 0},
 				{new FunctionResult(new double[0],
-						new double[]{1, 5, 4, -5, 2}), -5},
+						new double[]{1, 5, 4, -5, 2}), 3},
 		};
 	}
 	@DataProvider
 	public Object[][] testGetMaxY() {
 		return new Object[][]{
 				{new FunctionResult(new double[]{0.3, 2.3},
-						new double[]{3.148703935719195, 13.89}), 13.89},
+						new double[]{3.148703935719195, 13.89}), 1},
 				{new FunctionResult(new double[0],
-						new double[]{1, 5, 4, -5, 2}), 5},
+						new double[]{1, 5, 4, -5, 2}), 1},
 		};
 	}
 	@DataProvider

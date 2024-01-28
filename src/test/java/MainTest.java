@@ -54,15 +54,15 @@ public class MainTest {
 	}
 	@Test(dataProviderClass = MainDataProvider.class,
 			dataProvider = "testGetMinY")
-	public void testGetMinY(FunctionResult functionResult, double expected) {
+	public void testGetMinY(FunctionResult functionResult, int expected) {
 		assertThat(main.getMinY(functionResult))
-				.isCloseTo(expected, Offset.offset(EPS));
+				.isEqualTo(expected);
 	}
 	@Test(dataProviderClass = MainDataProvider.class,
 			dataProvider = "testGetMaxY")
-	public void testGetMaxY(FunctionResult functionResult, double expected) {
+	public void testGetMaxY(FunctionResult functionResult, int expected) {
 		assertThat(main.getMaxY(functionResult))
-				.isCloseTo(expected, Offset.offset(EPS));
+				.isEqualTo(expected);
 	}
 	@Test(dataProviderClass = MainDataProvider.class,
 			dataProvider = "testGetSum")

@@ -37,13 +37,25 @@ public class Main {
 		return new FunctionResult(x, y);
 	}
 
-	public double getMaxY(FunctionResult functionResult) {
-		return Arrays.stream(functionResult.y())
-				.max().orElse(0);
+	public int getMaxY(FunctionResult functionResult) {
+		int max = -1;
+		double[] y = functionResult.y();
+		for (int i = 0; i < y.length; i++) {
+			if (max == -1 || y[max] < y[i]) {
+				max = i;
+			}
+		}
+		return max;
 	}
-	public double getMinY(FunctionResult functionResult) {
-		return Arrays.stream(functionResult.y())
-				.min().orElse(0);
+	public int getMinY(FunctionResult functionResult) {
+		int min = -1;
+		double[] y = functionResult.y();
+		for (int i = 0; i < y.length; i++) {
+			if (min == -1 || y[min] > y[i]) {
+				min = i;
+			}
+		}
+		return min;
 	}
 	public double getSum(FunctionResult functionResult) {
 		return Arrays.stream(functionResult.y())
