@@ -46,7 +46,10 @@ public class MainTest {
 			dataProvider = "testGetFunctionValuesByDiapason")
 	public void testGetFunctionValuesByDiapason(double step, double start,
 												double end, FunctionResult expected) {
-		assertThat(main.getFunctionValuesByDiapason(step, start, end))
-				.isEqualTo(expected);
+		FunctionResult actual = main.getFunctionValuesByDiapason(step, start, end);
+		assertThat(actual.x())
+				.containsExactly(expected.x(), Offset.offset(EPS));
+		assertThat(actual.y())
+				.containsExactly(expected.y(), Offset.offset(EPS));
 	}
 }

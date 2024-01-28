@@ -29,16 +29,16 @@ public class MainDataProvider {
 	@DataProvider
 	public static Object[][] testGetCountOfSteps() {
 		return new Object[][]{
-				{0.002, 0.3, 2.8, 1250},
-				{1, 0.3, 2.8, 2},
-				{0.2, 0.3, 2.8, 12},
-				{0.001, 0, 1, 1000},
+				{0.002, 0.3, 2.8, 1251},
+				{1, 0.3, 2.8, 3},
+				{0.2, 0.3, 2.8, 13},
+				{0.001, 0, 1, 1001},
 		};
 	}
 	@DataProvider
 	public static Object[][] testGetFunctionValuesByDiapason() {
 		return new Object[][]{
-				{0.2, 0.3, 2.8,
+				{2, 0.3, 2.8,
 						new FunctionResult(new double[]{0.3, 2.3},
 								new double[]{3.148703935719195, 13.89})}
 		};

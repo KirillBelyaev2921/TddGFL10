@@ -18,10 +18,20 @@ public class Main {
 	}
 
 	public int getCountOfSteps(double step, double start, double end) {
-		return (int) ((end - start) / step);
+		return ((int) ((end - start) / step)) + 1;
 	}
 
 	public FunctionResult getFunctionValuesByDiapason(double step, double start, double end) {
-		return new FunctionResult(new double[0], new double[0]);
+		int n = getCountOfSteps(step, start, end);
+		double[] x = new double[n];
+		double[] y = new double[n];
+
+		double current = start;
+		for (int i = 0; i < n; i++) {
+			x[i] = current;
+			y[i] = calculate(current);
+			current += step;
+		}
+		return new FunctionResult(x, y);
 	}
 }
