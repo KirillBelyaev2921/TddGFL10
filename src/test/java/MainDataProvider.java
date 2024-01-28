@@ -68,4 +68,22 @@ public class MainDataProvider {
 						new double[]{1, 5, 4, -5, 2}), 5},
 		};
 	}
+	@DataProvider
+	public Object[][] testGetSum() {
+		return new Object[][]{
+				{new FunctionResult(new double[]{0.3, 2.3},
+						new double[]{3.148703935719195, 13.89}), 17.038703935719195},
+				{new FunctionResult(new double[0],
+						new double[]{1, 5, 4, -5, 2}), 7},
+		};
+	}
+	@DataProvider
+	public Object[][] testGetAvg() {
+		return new Object[][]{
+				{new FunctionResult(new double[]{0.3, 2.3},
+						new double[]{3.148703935719195, 13.89}), 8.5193519678595975},
+				{new FunctionResult(new double[0],
+						new double[]{1, 5, 4, -5, 2}), 1.4},
+		};
+	}
 }

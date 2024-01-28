@@ -64,4 +64,16 @@ public class MainTest {
 		assertThat(main.getMaxY(functionResult))
 				.isCloseTo(expected, Offset.offset(EPS));
 	}
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetSum")
+	public void testGetSum(FunctionResult functionResult, double expected) {
+		assertThat(main.getSum(functionResult))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetAvg")
+	public void testGetAvg(FunctionResult functionResult, double expected) {
+		assertThat(main.getAvg(functionResult))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
 }

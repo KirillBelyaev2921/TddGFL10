@@ -45,4 +45,12 @@ public class Main {
 		return Arrays.stream(functionResult.y())
 				.min().orElse(0);
 	}
+	public double getSum(FunctionResult functionResult) {
+		return Arrays.stream(functionResult.y())
+				.sum();
+	}
+	public double getAvg(FunctionResult functionResult) {
+		return Arrays.stream(functionResult.y())
+				.average().orElse(0);
+	}
 }
