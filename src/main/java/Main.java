@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 	private static final double A = 2.3;
 	public double calculate(double x) {
@@ -33,5 +35,14 @@ public class Main {
 			current += step;
 		}
 		return new FunctionResult(x, y);
+	}
+
+	public double getMaxY(FunctionResult functionResult) {
+		return Arrays.stream(functionResult.y())
+				.max().orElse(0);
+	}
+	public double getMinY(FunctionResult functionResult) {
+		return Arrays.stream(functionResult.y())
+				.min().orElse(0);
 	}
 }

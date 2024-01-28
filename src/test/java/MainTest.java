@@ -52,4 +52,16 @@ public class MainTest {
 		assertThat(actual.y())
 				.containsExactly(expected.y(), Offset.offset(EPS));
 	}
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetMinY")
+	public void testGetMinY(FunctionResult functionResult, double expected) {
+		assertThat(main.getMinY(functionResult))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetMaxY")
+	public void testGetMaxY(FunctionResult functionResult, double expected) {
+		assertThat(main.getMaxY(functionResult))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
 }
