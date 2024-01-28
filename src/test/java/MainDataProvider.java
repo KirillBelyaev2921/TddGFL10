@@ -5,6 +5,8 @@ public class MainDataProvider {
 	@DataProvider
 	public static Object[][] testFirstCase() {
 		return new Object[][]{
+				{0.2, 3.3138302146549767},
+				{0.3, 3.148703935719195},
 		};
 	}
 	@DataProvider

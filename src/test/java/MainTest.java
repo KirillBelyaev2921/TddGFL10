@@ -14,7 +14,14 @@ public class MainTest {
 	}
 
 	@Test(dataProviderClass = MainDataProvider.class,
-	dataProvider = "testSecondCase")
+			dataProvider = "testFirstCase")
+	public void testFirstCase(double x, double expected) {
+		assertThat(main.calculate(x))
+				.isCloseTo(expected, Offset.offset(EPS));
+	}
+
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testSecondCase")
 	public void testSecondCase(double x, double expected) {
 		assertThat(main.calculate(x))
 				.isCloseTo(expected, Offset.offset(EPS));
