@@ -1,6 +1,17 @@
 import java.util.Arrays;
 
 public class Main {
+	public static void main(String[] args) {
+		new Main().run();
+	}
+
+	private void run() {
+		FunctionResult result = getFunctionValuesByDiapason(
+				0.002, 0.3, 2.8);
+		printMinValue(result);
+		printMaxValue(result);
+	}
+
 	private static final double A = 2.3;
 	public double calculate(double x) {
 		double result;
@@ -68,12 +79,22 @@ public class Main {
 
 	public void printMinValue(FunctionResult functionResult) {
 		int index = getMinY(functionResult);
-		System.out.printf("Min Value - Index: %d, Abscissa: %f, Ordinate: %f",
+		System.out.printf("""
+						Min Value:
+							Index - %d,
+							x - %f,
+							y - %f
+						""",
 				index, functionResult.x()[index], functionResult.y()[index]);
 	}
 	public void printMaxValue(FunctionResult functionResult) {
 		int index = getMaxY(functionResult);
-		System.out.printf("Max Value - Index: %d, Abscissa: %f, Ordinate: %f",
+		System.out.printf("""
+						Max Value:
+							Index - %d,
+							x - %f,
+							y - %f
+						""",
 				index, functionResult.x()[index], functionResult.y()[index]);
 	}
 }
