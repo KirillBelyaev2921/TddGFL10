@@ -41,4 +41,12 @@ public class MainTest {
 		assertThat(main.getCountOfSteps(step, start, end))
 				.isEqualTo(expected);
 	}
+
+	@Test(dataProviderClass = MainDataProvider.class,
+			dataProvider = "testGetFunctionValuesByDiapason")
+	public void testGetFunctionValuesByDiapason(double step, double start,
+												double end, FunctionResult expected) {
+		assertThat(main.getFunctionValuesByDiapason(step, start, end))
+				.isEqualTo(expected);
+	}
 }

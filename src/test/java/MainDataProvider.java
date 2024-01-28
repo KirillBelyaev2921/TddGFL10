@@ -35,4 +35,12 @@ public class MainDataProvider {
 				{0.001, 0, 1, 1000},
 		};
 	}
+	@DataProvider
+	public static Object[][] testGetFunctionValuesByDiapason() {
+		return new Object[][]{
+				{0.2, 0.3, 2.8,
+						new FunctionResult(new double[]{0.3, 2.3},
+								new double[]{3.148703935719195, 13.89})}
+		};
+	}
 }

@@ -20,4 +20,8 @@ public class Main {
 	public int getCountOfSteps(double step, double start, double end) {
 		return (int) ((end - start) / step);
 	}
+
+	public FunctionResult getFunctionValuesByDiapason(double step, double start, double end) {
+		return new FunctionResult(new double[0], new double[0]);
+	}
 }
