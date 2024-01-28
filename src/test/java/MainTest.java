@@ -13,10 +13,10 @@ public class MainTest {
 		main = new Main();
 	}
 
-	@Test
-	public void testCalculate() {
-		double x = 1;
+	@Test(dataProviderClass = MainDataProvider.class,
+	dataProvider = "testSecondCase")
+	public void testSecondCase(double x, double expected) {
 		assertThat(main.calculate(x))
-				.isCloseTo(14.8, Offset.offset(EPS));
+				.isCloseTo(expected, Offset.offset(EPS));
 	}
 }
